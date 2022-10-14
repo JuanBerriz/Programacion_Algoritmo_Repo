@@ -4,25 +4,21 @@ def input_menu():
     while True:
         try:
             menu = int(input("Acción:"))
-            if menu == 0 or menu >= 5:
-                print("Acción no válida \n")
-                continue
-        except ValueError:
+            if menu <= 0 or menu >= 5:
+                raise Exception
+            return menu
+        except:
             print("Acción no válida\n")
-        else:
-            break
-    return menu
 
 def input_cedula():
     cedula = input("Cédula:")
-    x = [num for num in cedula]
-    verificar = x[len(x)-3:len(x)]
-    ultimos = int("".join(verificar))
-    for num in range(2, ultimos-1):
-        if ultimos%num == 0:
-            descuento = 0
+    x = [num for num in cedula[-3:]]
+    verificar = int(("".join(x)))
+    for num in range(2, verificar):
+        if verificar%num == 0:
+            descuento = 1
         else:
-            descuento = 0.1
+            descuento = 0.9
     return cedula, descuento
 
 def input_id():
@@ -30,26 +26,22 @@ def input_id():
         try:
             id = int(input("ID del juego:"))
             if id <= 0 or id >= 9:
-                print("ID de juego no existente")
-                continue
-        except ValueError:
+                raise Exception
+            return id
+        except:
             print("Error, intente de nuevo\n")
-        else:
-            break
-    return id
 
-def estadisticas(id_compra):
+def estadisticas(id_compra, estadistica):
     for games in estadistica:
         for key,value in games.items():
             if key == "id" and value == id_compra:
                 games["Cantidad Vendida"] += 1
-            else:
-                continue
-    return
+    return estadistica
 
 
-
-juegos = {
+def main():
+    
+    juegos = {
     "Shooter": [
         {
             "id": 1,
@@ -95,10 +87,10 @@ juegos = {
             "name": "GTA V",
             "price": 40
         }
-    ],  
-}
+        ],  
+    }
 
-estadistica = [
+    estadistica = [
         {
         "id": 1,
         "name": "Overwatch2",
@@ -146,68 +138,71 @@ estadistica = [
         "name": "GTA V",
         "Cantidad Vendida": 0 
         } 
-]
+    ]
 
-print("***********======BIENVENIDO=======***********")
-while True:
+    print("***********======BIENVENIDO=======***********")
+    while True:
 
-    print("Ingrese la acción que desea realizar:\n1-Ver directorio de juegos \n2-Realizar compra \n3-Estadísticas \n4-Salir \n")
-    menu = input_menu()
+        print("Ingrese la acción que desea realizar:\n1-Ver directorio de juegos \n2-Realizar compra \n3-Estadísticas \n4-Salir \n")
+        menu = input_menu()
 
-    if menu == 1:
-        for genre, games in juegos.items():
-            print(f"{genre} \n")
-            for dict in games:
-                for key,info in dict.items():
-                    if key == "price" and info == 0:
-                        info = "GRATIS"
-                    print("     ",key," ---- ",info)
-                    if key =="price":
-                        print("")
+        if menu == 1:
+            for genre, games in juegos.items():
+                print(f"{genre} \n")
+                for dict in games:
+                    for key,info in dict.items():
+                        if key == "price" and info == 0:
+                            info = "GRATIS"
+                        print("     ",key," ---- ",info)
+                        if key =="price":
+                            print("")
 
-    elif menu == 2:
-        nombre = input("Ingrese su nombre y apellido: ")
-        cedula, descuento = input_cedula()
-        id_compra = input_id()
-        for genre, games in juegos.items():
-            for dict in games:
-                for key, info in dict.items():
+        elif menu == 2:
+            nombre = input("Ingrese su nombre y apellido: ")
+            cedula, descuento = input_cedula()
+            id_compra = input_id()
+            for genre, games in juegos.items():
+                for dict in games:
+                    for key, info in dict.items():
+                        if key == "id":
+                            if id_compra == info:
+                                juego_comprar = dict
+        
+            print("Confirmar que es el juego que desea.")
+            for key, info in juego_comprar.items():
+                if key == "price" and info == 0:
+                            info = "GRATIS"
+                print(key," ---- ",info)
+            confirmar = input("S para seguir adelante, N para eliminar la compra (Nota: Si escribe N, se regresará al menú principal: ")
+            if confirmar.lower() == "s":
+                estadisticas(id_compra, estadistica)
+                if descuento == 0.9:
+                    print("Felicidades, aplica para un descuento del 10% en su compra final, se aplicará automaticamente")
+                factura = {
+                    "Nombre": nombre,
+                    "Cedula": cedula,
+                    "Juego": juego_comprar["name"],
+                    "Precio": juego_comprar["price"]*descuento
+                }
+                print("Su total es:")
+                for key, info in factura.items():
+                    if key == "Precio" and info == 0:
+                            info = "GRATIS"
+                    print("    ",key, " --- ", info)
+                print('')
+            else:
+                continue
+
+        elif menu == 3:
+            for games in estadistica:
+                for key, value in games.items():
                     if key == "id":
-                        if id_compra == info:
-                            juego_comprar = dict
-    
-        print("Confirmar que es el juego que desea.")
-        for key, info in juego_comprar.items():
-            if key == "price" and info == 0:
-                        info = "GRATIS"
-            print(key," ---- ",info)
-        confirmar = input("S para seguir adelante, N para eliminar la compra (Nota: Si escribe N, se regresará al menú principal: ")
-        if confirmar.lower() == "s":
-            estadisticas(id_compra)
-            if descuento == 0.1:
-                print("Felicidades, aplica para un descuento del 10% en su compra final, se aplicará automaticamente")
-            factura = {
-                "Nombre": nombre,
-                "Cedula": cedula,
-                "Juego": juego_comprar["name"],
-                "Precio": juego_comprar["price"]-(juego_comprar["price"]*descuento)
-            }
-            print("Su total es:")
-            for key, info in factura.items():
-                if key == "Precio" and info == 0:
-                        info = "GRATIS"
-                print("---",key, "---", info)
-            print('')
-        else:
-            continue
+                        continue
+                    print("   ", key," ---- ",value)
+                    if key =="Cantidad Vendida":
+                            print("")
+        elif menu == 4:
+            print("Muchas gracias y que tenga un buen día")
+            break
 
-    elif menu == 3:
-        for games in estadistica:
-            for key, value in games.items():
-                if key == "id":
-                    continue
-                print("   ", key," ---- ",value)
-
-    elif menu == 4:
-        print("Muchas gracias y que tenga un buen día")
-        break
+main()
