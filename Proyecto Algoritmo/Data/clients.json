@@ -1,0 +1,71 @@
+[
+ {
+  "nombre": "Juan Berrizbeitia",
+  "cedula": 2776932,
+  "edad": 21,
+  "compras": [
+   {
+    "id del partido": 42,
+    "asiento": "A9",
+    "tipo_entrada": "General",
+    "id de la compra": 1
+   },
+   {
+    "id del partido": 31,
+    "asiento": "F5",
+    "tipo_entrada": "VIP",
+    "id de la compra": 2
+   },
+   {
+    "id del partido": 31,
+    "asiento": "E30",
+    "tipo_entrada": "General",
+    "id de la compra": 3
+   }
+  ]
+ },
+ {
+  "nombre": "Manuel Perez",
+  "cedula": 78392,
+  "edad": 45,
+  "compras": [
+   {
+    "id del partido": 5,
+    "asiento": "G4",
+    "tipo_entrada": "VIP",
+    "id de la compra": 4
+   },
+   {
+    "id del partido": 31,
+    "asiento": "E4",
+    "tipo_entrada": "VIP",
+    "id de la compra": 5
+   }
+  ]
+ },
+ {
+  "nombre": "Nelson Ujad",
+  "cedula": 54368,
+  "edad": 60,
+  "compras": [
+   {
+    "id del partido": 5,
+    "asiento": "M8",
+    "tipo_entrada": "VIP",
+    "id de la compra": 6
+   },
+   {
+    "id del partido": 31,
+    "asiento": "F6",
+    "tipo_entrada": "VIP",
+    "id de la compra": 7
+   }
+  ]
+ },
+ {
+  "nombre": "Manuel Uza",
+  "cedula": 123,
+  "edad": 49,
+  "compras": []
+ }
+]

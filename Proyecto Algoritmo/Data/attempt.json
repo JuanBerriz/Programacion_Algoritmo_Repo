@@ -1,0 +1,451 @@
+{
+ "clientes": [
+  {
+   "nombre": "Juan Berrizbeitia",
+   "cedula": 2776932,
+   "edad": 21,
+   "compras": [
+    {
+     "id del partido": 42,
+     "asiento": "A9",
+     "tipo_entrada": "General",
+     "id de la compra": 1
+    },
+    {
+     "id del partido": 31,
+     "asiento": "F5",
+     "tipo_entrada": "VIP",
+     "id de la compra": 2
+    },
+    {
+     "id del partido": 31,
+     "asiento": "E30",
+     "tipo_entrada": "General",
+     "id de la compra": 3
+    }
+   ]
+  },
+  {
+   "nombre": "Manuel Perez",
+   "cedula": 78392,
+   "edad": 45,
+   "compras": [
+    {
+     "id del partido": 5,
+     "asiento": "G4",
+     "tipo_entrada": "VIP",
+     "id de la compra": 4
+    },
+    {
+     "id del partido": 31,
+     "asiento": "E4",
+     "tipo_entrada": "VIP",
+     "id de la compra": 5
+    }
+   ]
+  },
+  {
+   "nombre": "Nelson Ujad",
+   "cedula": 54368,
+   "edad": 60,
+   "compras": [
+    {
+     "id del partido": 5,
+     "asiento": "M8",
+     "tipo_entrada": "VIP",
+     "id de la compra": 6
+    },
+    {
+     "id del partido": 31,
+     "asiento": "F6",
+     "tipo_entrada": "VIP",
+     "id de la compra": 7
+    }
+   ]
+  },
+  {
+   "nombre": "Manuel Uza",
+   "cedula": 123,
+   "edad": 49,
+   "compras": []
+  }
+ ],
+ "restaurantes": [
+  [
+   {
+    "name": "Al Bayt Restaurant",
+    "products": [
+     {
+      "name": "Beer",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "alcoholic"
+     },
+     {
+      "name": "Pepsi",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Water",
+      "quantity": 25,
+      "price": 4,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Gatorade",
+      "quantity": 25,
+      "price": 6,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Hamburger",
+      "quantity": 25,
+      "price": 15,
+      "type": "food",
+      "adicional": "package"
+     },
+     {
+      "name": "Fish and Chips",
+      "quantity": 25,
+      "price": 20,
+      "type": "food",
+      "adicional": "plate"
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "name": "Lusail Restaurant",
+    "products": [
+     {
+      "name": "Beer",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "alcoholic"
+     },
+     {
+      "name": "Pepsi",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Water",
+      "quantity": 25,
+      "price": 4,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Hamburger",
+      "quantity": 25,
+      "price": 15,
+      "type": "food",
+      "adicional": "package"
+     },
+     {
+      "name": "Fish and Chips",
+      "quantity": 25,
+      "price": 20,
+      "type": "food",
+      "adicional": "plate"
+     }
+    ]
+   },
+   {
+    "name": "The emir Restaurant",
+    "products": [
+     {
+      "name": "Beer",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "alcoholic"
+     },
+     {
+      "name": "Pepsi",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Water",
+      "quantity": 25,
+      "price": 4,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Pasta",
+      "quantity": 25,
+      "price": 20,
+      "type": "food",
+      "adicional": "plate"
+     },
+     {
+      "name": "Steak",
+      "quantity": 25,
+      "price": 35,
+      "type": "food",
+      "adicional": "plate"
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "name": "Ahmad Bin Ali Restaurant",
+    "products": [
+     {
+      "name": "Beer",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "alcoholic"
+     },
+     {
+      "name": "Pepsi",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Water",
+      "quantity": 25,
+      "price": 4,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Hamburger",
+      "quantity": 25,
+      "price": 15,
+      "type": "food",
+      "adicional": "package"
+     },
+     {
+      "name": "Fish and Chips",
+      "quantity": 25,
+      "price": 20,
+      "type": "food",
+      "adicional": "plate"
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "name": "Al Janoub Restaurant",
+    "products": [
+     {
+      "name": "Beer",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "alcoholic"
+     },
+     {
+      "name": "Pepsi",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Water",
+      "quantity": 25,
+      "price": 4,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Hamburger",
+      "quantity": 25,
+      "price": 15,
+      "type": "food",
+      "adicional": "package"
+     },
+     {
+      "name": "Fish and Chips",
+      "quantity": 25,
+      "price": 20,
+      "type": "food",
+      "adicional": "plate"
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "name": "Al Thumama Restaurant",
+    "products": [
+     {
+      "name": "Beer",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "alcoholic"
+     },
+     {
+      "name": "Pepsi",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Water",
+      "quantity": 25,
+      "price": 4,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Hamburger",
+      "quantity": 25,
+      "price": 15,
+      "type": "food",
+      "adicional": "plate"
+     },
+     {
+      "name": "Fish and Chips",
+      "quantity": 25,
+      "price": 20,
+      "type": "food",
+      "adicional": "plate"
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "name": "Education City Restaurant",
+    "products": [
+     {
+      "name": "Beer",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "alcoholic"
+     },
+     {
+      "name": "Pepsi",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Water",
+      "quantity": 25,
+      "price": 4,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Hamburger",
+      "quantity": 25,
+      "price": 15,
+      "type": "food",
+      "adicional": "package"
+     },
+     {
+      "name": "Fish and Chips",
+      "quantity": 25,
+      "price": 20,
+      "type": "food",
+      "adicional": "plate"
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "name": "Khalifa International Restaurant",
+    "products": [
+     {
+      "name": "Beer",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "alcoholic"
+     },
+     {
+      "name": "Pepsi",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Water",
+      "quantity": 25,
+      "price": 4,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Hamburger",
+      "quantity": 25,
+      "price": 15,
+      "type": "food",
+      "adicional": "package"
+     },
+     {
+      "name": "Fish and Chips",
+      "quantity": 25,
+      "price": 20,
+      "type": "food",
+      "adicional": "plate"
+     }
+    ]
+   }
+  ],
+  [
+   {
+    "name": "974 Restaurant",
+    "products": [
+     {
+      "name": "Pepsi",
+      "quantity": 25,
+      "price": 10,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Water",
+      "quantity": 25,
+      "price": 4,
+      "type": "beverages",
+      "adicional": "non-alcoholic"
+     },
+     {
+      "name": "Hamburger",
+      "quantity": 25,
+      "price": 15,
+      "type": "food",
+      "adicional": "package"
+     },
+     {
+      "name": "Fish and Chips",
+      "quantity": 25,
+      "price": 20,
+      "type": "food",
+      "adicional": "plate"
+     }
+    ]
+   }
+  ]
+ ]
+}

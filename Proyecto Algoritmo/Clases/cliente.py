@@ -1,3 +1,5 @@
+from Clases.compra import Compra
+
 class Cliente:
     lista_clientes = []
     def __init__(self, nombre, cedula, edad, lista_compras):
@@ -17,3 +19,10 @@ class Cliente:
         print(f"Edad: {self.edad}")
         print(f"Compras: {self.lista_compras}")
         print("\n")
+
+    def mostrar_compras(self):
+        for id in self.lista_compras:
+            att = Compra.find_compra(id)
+            att.info_compra()
+
+
